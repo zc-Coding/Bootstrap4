@@ -86,20 +86,27 @@
                 <div class="card-body">
                 <h5 class="card-title">Beauty and the Beast</h5>
                 <p class="card-text">This is a movie about a very pretty girl who enjoys spending time with a mountain lion, hilarity ensues</p>
-                <h6 class="card-subtitle text-muted">Showtimes:</h6>
+            <!-- New element learned Badge with counter -->
+                <button type="button" class="btn btn-primary">
+                  Showtimes: <span class="badge badge-light">6</span>
+                </button><br>
                 <a href="#" class="badge badge-pill badge-primary">1200</a>
                 <a href="#" class="badge badge-pill badge-primary">1330</a>
                 <a href="#" class="badge badge-pill badge-primary">1600</a>
                 <a href="#" class="badge badge-pill badge-primary">1730</a>
-                <a href="#" class="badge badge-pill badge-primary">1900</a>
-                <a href="#" class="badge badge-pill badge-primary">2130</a>                </div>
+                <a href="#" class="badge badge-pill badge-primary">1900</a> 
+                <a href="#" class="badge badge-pill badge-primary">2130</a>                 
+              </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="./images/ghostintheshell.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Ghost in the Shell</h5>
                 <p class="card-text">The tragic stroy of how a young man passed before his time and was reincarnated as a walnut, now he will learn life is not so easy inside a shell</p>
-                <h6 class="card-subtitle text-muted">Showtimes:</h6>
+            <!-- New Element learned badge with counter -->
+                <button type="button" class="btn btn-primary">
+                  Showtimes: <span class="badge badge-light">6</span>
+                </button><br>
                 <a href="#" class="badge badge-pill badge-primary">1200</a>
                 <a href="#" class="badge badge-pill badge-primary">1330</a>
                 <a href="#" class="badge badge-pill badge-primary">1600</a>
@@ -113,7 +120,10 @@
                 <div class="card-body">
                 <h5 class="card-title">Kong: Skull Island</h5>
                 <p class="card-text">it's like those dog toys but it's full of skulls and the whole thing takes place on an island</p>
-                <h6 class="card-subtitle text-muted">Showtimes:</h6>
+            <!-- New element learned Badge with counter -->
+                <button type="button" class="btn btn-primary">
+                  Showtimes: <span class="badge badge-light">6</span>
+                </button><br>
                 <a href="#" class="badge badge-pill badge-primary">1200</a>
                 <a href="#" class="badge badge-pill badge-primary">1330</a>
                 <a href="#" class="badge badge-pill badge-primary">1600</a>
@@ -133,12 +143,54 @@
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="One of us, One of us, ONE OF US!">
+                  Submit
+                </button>
                 </div>
             </form>
         </div>
         <!-- end email form -->
         
+        <!-- form modal -->
+        <div class="modal" id="register" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Show me the money</h5>
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="formFName">First Name:</label>
+                    <input type="text" class="form-control" id="formFName" placeholder="First Name Please">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupLName">Last Name:</label>
+                    <input type="text" class="form-control" id="formLName" placeholder="Last Name Please">
+                  </div>
+                  <div class="form-group">
+                    <label for="formEmail">Email:</label>
+                    <input type="text" class="form-control" id="formEmail" placeholder="Put Email Here">
+                  </div>
+                  <div class="form-group">
+                    <label for="formPassword">Password:</label>
+                    <input type="text" class="form-control" id="formPassword" placeholder="Put Password here">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end form modal -->
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">Sign up for our amazing movie deals!</button>
+        </div>
         <!-- Begin Footer Nav -->
         <div class="container my-3">
             <ul class="nav nav-inline">
@@ -160,5 +212,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+      $('.popover-dismiss').popover({
+      trigger: 'focus'
+      });
+    </script>
   </body>
 </html>
